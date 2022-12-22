@@ -1,7 +1,8 @@
 import {
     Stack,
     ImageList,
-    ImageListItem
+    ImageListItem, 
+    ImageListItemBar
 } from '@mui/material';
 
 const MuiImageList = () => {
@@ -18,6 +19,7 @@ const MuiImageList = () => {
                             src={item.img} 
                             alt={item.title} 
                             loading='lazy'/>
+                            <ImageListItemBar title={item.title}/>
                     </ImageListItem>
                 ))
             }
@@ -25,6 +27,22 @@ const MuiImageList = () => {
         <ImageList 
             variant='woven'
             sx={{width: 500, height: 450}}
+            cols={3}
+            gap={8}>
+            {
+                itemData.map((item)=> (
+                    <ImageListItem key={item.title}>
+                        <img 
+                            src={item.img} 
+                            alt={item.title} 
+                            loading='lazy'/>
+                    </ImageListItem>
+                ))
+            }
+        </ImageList>
+        <ImageList 
+            variant='masonry'
+            sx={{width: 500, height: 450, overflowY: 'scroll'}}
             cols={3}
             gap={8}>
             {

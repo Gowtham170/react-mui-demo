@@ -16,9 +16,11 @@ import {
   MuiImageList
 } from './components/layoutComponent/index';
 
+import MuiNavbar from './components/MuiNavbar';
+
 function App() {
   return (
-    <div className="App">
+    <div>
         {/* Input Component */}
 
         {/* Typography */}
@@ -58,6 +60,9 @@ function App() {
         <hr/>
         {/* ImageList Component */}
         <MuiImageList/>
+        <hr/>
+        {/* Navbar */}
+        <MuiNavbar/>
         <hr/>
     </div>
   );

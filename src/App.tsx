@@ -4,12 +4,23 @@ import {
   MuiButton,
   MuiTextField,
   MuiSelect,
-  MuiRadioButton
-} from './components/index';
+  MuiRadioButton,
+  MuiCheckBox,
+  MuiSwitch,
+  MuiAutoComplete
+} from './components/inputComponent/index';
+import {
+  MuiLayout,
+  MuiCard,
+  MuiAccordion,
+  MuiImageList
+} from './components/layoutComponent/index';
 
 function App() {
   return (
     <div className="App">
+        {/* Input Component */}
+
         {/* Typography */}
         <MuiTypography/>
         <hr/>
@@ -24,6 +35,29 @@ function App() {
         <hr/>
         {/* RadioButton */}
         <MuiRadioButton/>
+        <hr/>
+        {/* Checkbox */}
+        <MuiCheckBox/>
+        <hr/>
+        {/* Switch */}
+        <MuiSwitch/>
+        <hr/>
+        {/* Autocomplet */}
+        <MuiAutoComplete/>
+        <hr/>
+
+        {/* Layout Component */}
+
+        <MuiLayout/>
+        <hr/>
+        {/* Card Component */}
+        <MuiCard/>
+        <hr/>
+        {/* Accordion Component */}
+        <MuiAccordion/>
+        <hr/>
+        {/* ImageList Component */}
+        <MuiImageList/>
         <hr/>
     </div>
   );

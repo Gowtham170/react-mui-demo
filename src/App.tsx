@@ -16,6 +16,7 @@ import {
   MuiAccordion,
   MuiImageList
 } from './components/layoutComponent/index';
+import MuiResponsiveness from './components/MuiResponsiveness';
 import {
   MuiLink,
   MuiNavbar,
@@ -24,8 +25,22 @@ import {
   MuiSpeedDial
 } from './components/navigation/index';
 
+import { createTheme, colors, ThemeProvider } from '@mui/material';
+
+const theme = createTheme({
+  status: {
+    danger: '#e53e3e',
+  },
+  palette: {
+    secondary: {
+      main: colors.orange[500],
+    },
+  },
+});
+
 function App() {
   return (
+    <ThemeProvider theme={theme}>
     <div>
         {/* Input Component */}
 
@@ -91,7 +106,12 @@ function App() {
         {/* Table */}
         <MuiTable/>
         <hr/>
+
+        {/* Responsiveness */}
+        <MuiResponsiveness/>
+        <hr/>
     </div>
+    </ThemeProvider>
   );
 }
 

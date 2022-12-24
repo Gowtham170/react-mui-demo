@@ -1,4 +1,5 @@
 import './App.css';
+import MuiTable from './components/dispalyComponent/MuiTable';
 import { 
   MuiTypography, 
   MuiButton,
@@ -9,14 +10,19 @@ import {
   MuiSwitch,
   MuiAutoComplete
 } from './components/inputComponent/index';
-import {
+import {  
   MuiLayout,
   MuiCard,
   MuiAccordion,
   MuiImageList
 } from './components/layoutComponent/index';
-
-import MuiNavbar from './components/MuiNavbar';
+import {
+  MuiLink,
+  MuiNavbar,
+  MuiBreadcrumbs,
+  MuiDrawer,
+  MuiSpeedDial
+} from './components/navigation/index';
 
 function App() {
   return (
@@ -61,8 +67,29 @@ function App() {
         {/* ImageList Component */}
         <MuiImageList/>
         <hr/>
+
+        {/* Navigation Component */}
+
         {/* Navbar */}
-        <MuiNavbar/>
+         <MuiNavbar/>
+        <hr/>
+        {/* Link */}
+        <MuiLink/>
+        <hr/>
+        {/* Breadcrumbs */}
+        <MuiBreadcrumbs/>
+        <hr/>
+        {/* Drawer */}
+        <MuiDrawer/>
+        <hr/>
+        {/* SpeedDial */}
+        <MuiSpeedDial/>
+        <hr/>
+
+        {/* DiaplayComponent */}
+
+        {/* Table */}
+        <MuiTable/>
         <hr/>
     </div>
   );

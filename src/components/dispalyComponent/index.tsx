@@ -1,0 +1,1 @@
+import MuiTable  from "./MuiTable";
